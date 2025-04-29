@@ -1,0 +1,11 @@
+name: 2025-gtdb-rs226
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.12
+  - snakemake=9
+  - polars
+  - sourmash_plugin_directsketch=0.6.2
+  - sourmash_plugin_branchwater=0.9.13

@@ -1,0 +1,11 @@
+name: gtdb
+tag: rs226
+ksizes:
+- 21
+- 31
+- 51
+scaled: 1000
+archaea_metadata_url: 'https://data.ace.uq.edu.au/public/gtdb/data/releases/release226/226.0/ar53_metadata_r226.tsv.gz'
+archaea_metadata_filename: 'ar53_metadata_r226.tsv.gz'
+bacteria_metadata_url: 'https://data.ace.uq.edu.au/public/gtdb/data/releases/release226/226.0/bac120_metadata_r226.tsv.gz'
+bacteria_metadata_filename: 'bac120_metadata_r226.tsv.gz'
