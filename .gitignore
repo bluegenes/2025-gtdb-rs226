@@ -3,4 +3,10 @@
 ../*
 .snakemake
 *csv*
+*tsv*
+*zip
+*check
+*log
+*batchlist.txt
+logs/*
 

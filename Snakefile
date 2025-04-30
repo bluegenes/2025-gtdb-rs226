@@ -166,8 +166,10 @@ rule picklist_confirm:
     shell:
         """
         sourmash sig check --picklist {input.picklist}:ident:ident \
-            {input.zipf} --fail 2> {log}
+            {input.zipf} 2> {log}
         """
+        # there are missing values due to supression, so we don't want to fail here. Maybe we need to make a new picklist without the suppressed accessions?
+        # --fail
 
 rule picklist_confirm_reps:
     input:
@@ -185,8 +187,9 @@ rule picklist_confirm_reps:
     shell:
         """
         sourmash sig check --picklist {input.picklist}:ident:ident \
-            {input.zipf} --fail 2> {log}
+            {input.zipf} 2> {log}
         """
+        # --fail
 
 rule index_rocksdb:
     input:
@@ -219,5 +222,5 @@ rule tar_rocksdb:
     benchmark: f"{LOGS}/{{db}}.k{{k}}.tar-rocksdb.benchmark"
     shell:
         """
-        tar -cfz {output.rocksdb_tar} {params.rocksdb} 2> {log}
+        tar -czf {output.rocksdb_tar} {params.rocksdb} 2> {log}
         """
