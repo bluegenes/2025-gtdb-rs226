@@ -104,7 +104,7 @@ rule gbsketch:
     benchmark: f"{LOGS}/{basename}.gbsketch.benchmark"
     params:
         param_str = lambda w: build_param_str("dna")
-    threads: 1
+    threads: 30
     resources:
         mem_mb= lambda wildcards, attempt: attempt * 10000,
         time= 6000,
